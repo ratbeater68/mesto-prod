@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -7,15 +7,15 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mesto</title>
-    <script type="module" crossorigin src="./assets/index-C0U76MOM.js"></script>
+    <title>Mesto</title>
+    <script type="module" crossorigin src="./assets/index-BEBW_dpD.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DKwl_nIp.css">
   </head>
   <body class="page">
     <div class="page__content">
       <header class="header page__section">
         <img
-          src="./assets/logo-C_QQpFK1.svg"
+          src="./assets/logo-DQ1BIEMY.svg"
           alt="Логотип проекта место"
           class="logo header__logo"
         />
@@ -24,7 +24,9 @@
         <section class="profile page__section">
           <div
             class="profile__image"
-            style="background-image: url('./assets/loading_avatar-1D1hWZtb.gif')"
+            style="
+              background-image: url(&quot;./assets/loading_avatar-1D1hWZtb.gif&quot;);
+            "
           ></div>
           <div class="profile__info">
             <h1 class="profile__title"></h1>
@@ -53,14 +55,14 @@
                 id="user-name"
                 class="popup__input popup__input_type_name"
                 minlength="2"
-                maxlength="40" 
+                maxlength="40"
                 pattern="^[A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё\s\-]*[A-Za-zА-Яа-яЁё]$"
                 required
                 data-error-message="От 2-х до 40 символов: латынь, кириллица, дефис и пробелы между словами"
                 placeholder="Имя"
+                novalidate
               />
               <span class="popup__error" id="user-name-error"></span>
-
             </label>
             <label class="popup__label">
               <input
@@ -104,7 +106,8 @@
                 maxlength="30"
                 pattern="^[A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё\s\-]*[A-Za-zА-Яа-яЁё]$"
                 required
-                data-error-message="От 2-х до 40 символов: латынь, кириллица, дефис и пробелы между словами"
+                data-error-message="От 2-х до 30 символов: латынь, кириллица, дефис и пробелы между словами"
+                novalidate
               />
               <span class="popup__error" id="place-name-error"></span>
             </label>
@@ -115,7 +118,7 @@
                 id="place-link"
                 class="popup__input popup__input_type_url"
                 placeholder="Ссылка на картинку"
-                pattern="https?://[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)*\.[a-zA-Z]{2,}(:[0-9]+)?(/.*)?" 
+                pattern="https?://[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)*\.[a-zA-Z]{2,}(:[0-9]+)?(/.*)?"
                 data-error-message="Разрешены только ссылки на источники в сети Интернет по протоколам http или https"
                 required
               />
@@ -171,9 +174,10 @@
                 id="user-avatar"
                 class="popup__input popup__input_type_avatar"
                 placeholder="Ссылка на изображение"
-                pattern="https?://[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)*\.[a-zA-Z]{2,}(:[0-9]+)?(/.*)?" 
+                pattern="https?://[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)*\.[a-zA-Z]{2,}(:[0-9]+)?(/.*)?"
                 data-error-message="Разрешены только ссылки на источники в сети Интернет по протоколам http или https"
                 required
+                novalidate
               />
               <span class="popup__error" id="user-avatar-error"></span>
             </label>
@@ -190,7 +194,7 @@
         </div>
       </div>
 
-    <div class="popup popup_type_info">
+      <div class="popup popup_type_info">
         <div class="popup__content popup__content_content_info">
           <button type="button" class="popup__close"></button>
           <h3 class="popup__title"></h3>
@@ -200,14 +204,20 @@
         </div>
       </div>
     </div>
-
+
 
     <template id="card-template">
       <li class="places__item card">
         <img class="card__image" src="" alt="" />
         <div class="card__control">
-          <button type="button" class="card__control-button card__control-button_type_info"></button>
-          <button type="button" class="card__control-button card__control-button_type_delete"></button>
+          <button
+            type="button"
+            class="card__control-button card__control-button_type_info"
+          ></button>
+          <button
+            type="button"
+            class="card__control-button card__control-button_type_delete"
+          ></button>
         </div>
         <div class="card__description">
           <h2 class="card__title"></h2>
