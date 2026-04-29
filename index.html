@@ -8,7 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mesto</title>
-    <script type="module" crossorigin src="./assets/index-BEBW_dpD.js"></script>
+    <script type="module" crossorigin src="./assets/index-B0WGNrmk.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DKwl_nIp.css">
   </head>
   <body class="page">
@@ -47,20 +47,19 @@
         <div class="popup__content">
           <button type="button" class="popup__close"></button>
           <h3 class="popup__title">Редактировать профиль</h3>
-          <form class="popup__form" name="edit-profile">
+          <form class="popup__form" name="edit-profile" novalidate>
             <label class="popup__label">
               <input
                 type="text"
                 name="user-name"
                 id="user-name"
                 class="popup__input popup__input_type_name"
+                placeholder="Имя"
                 minlength="2"
                 maxlength="40"
                 pattern="^[A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё\s\-]*[A-Za-zА-Яа-яЁё]$"
-                required
                 data-error-message="От 2-х до 40 символов: латынь, кириллица, дефис и пробелы между словами"
-                placeholder="Имя"
-                novalidate
+                required
               />
               <span class="popup__error" id="user-name-error"></span>
             </label>
@@ -70,10 +69,10 @@
                 name="user-description"
                 id="user-description"
                 class="popup__input popup__input_type_description"
+                placeholder="Занятие"
                 minlength="2"
                 maxlength="200"
-                data-error-message=""
-                placeholder="Занятие"
+                required
               />
               <span class="popup__error" id="user-description-error"></span>
             </label>
@@ -94,7 +93,7 @@
         <div class="popup__content">
           <button type="button" class="popup__close"></button>
           <h3 class="popup__title">Новое место</h3>
-          <form class="popup__form" name="new-place">
+          <form class="popup__form" name="new-place" novalidate>
             <label class="popup__label">
               <input
                 type="text"
@@ -105,9 +104,8 @@
                 minlength="2"
                 maxlength="30"
                 pattern="^[A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё\s\-]*[A-Za-zА-Яа-яЁё]$"
-                required
                 data-error-message="От 2-х до 30 символов: латынь, кириллица, дефис и пробелы между словами"
-                novalidate
+                required
               />
               <span class="popup__error" id="place-name-error"></span>
             </label>
@@ -166,7 +164,7 @@
         <div class="popup__content">
           <button type="button" class="popup__close"></button>
           <h3 class="popup__title">Обновить аватар</h3>
-          <form class="popup__form" name="edit-avatar">
+          <form class="popup__form" name="edit-avatar" novalidate>
             <label class="popup__label">
               <input
                 type="url"
@@ -177,7 +175,6 @@
                 pattern="https?://[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)*\.[a-zA-Z]{2,}(:[0-9]+)?(/.*)?"
                 data-error-message="Разрешены только ссылки на источники в сети Интернет по протоколам http или https"
                 required
-                novalidate
               />
               <span class="popup__error" id="user-avatar-error"></span>
             </label>
